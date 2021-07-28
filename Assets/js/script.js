@@ -61,7 +61,7 @@ $(document).ready(function () {
         saveTimeText = $(this).parent().attr("id") //Saves the parent ID
         inputText = $(this).siblings(".description").val() // Saves the value inside the textarea
         localStorage.setItem(saveTimeText, inputText)
-        console.log(`The id: ${saveTimeText} has saved ${inputText} into the local storage.`)
+        console.log(`The id "${saveTimeText}" has saved "${inputText}" into the local storage.`)
     })
 
     //get Item for local storage
