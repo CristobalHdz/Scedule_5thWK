@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Discoreverd that ids can start with numbers -->
+<!-- Did the date and schedule codes separately just for cleaner code -->
+<!-- Get hours: https://www.includehelp.com/code-snippets/get-current-time-in-hours24-minutes-seconds-format-in-javascript.aspx#:~:text=To%20get%20the%20current%20time%20in%20JavaScript%2C%20we,getSeconds%20%28%29%20Method%20%E2%80%93%20It%20returns%20current%20seconds -->
+<!-- Get all traversing elements: https://www.tutorialsteacher.com/jquery/jquery-traversing-dom-elements -->
+<!-- Can't declare before in JQUERY -->
+<!-- How to loop thorugh elements: https://www.geeksforgeeks.org/how-to-loop-through-input-elements-in-jquery/ -->
+<!-- Another element looping: https://www.codesd.com/item/jquery-loops-over-the-list-items-and-gets-the-value-of-the-data-imgid-attribute.html  -->
+<!-- Have to change all of the ids to start with the same thing. It is easier for the loop to start with "time" and give a number -->
+<!-- Can work with id=time1, but it is easier just to show the real time beacuse of the conditions that checks the time vs current time -->
+
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,17 +30,10 @@
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="container">
-  
-    <div class="row time-block">
-      <div class="hour col-1">
-        8am
-      </div>
-      <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
-    </div>
 
-    <div class="row time-block">
+  <div class="container">
+
+    <div class="row time-block" id="time9">
       <div class="hour col-1">
         9am
       </div>
@@ -37,7 +41,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time10">
       <div class="hour col-1">
         10am
       </div>
@@ -45,7 +49,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time11">
       <div class="hour col-1">
         11am
       </div>
@@ -53,7 +57,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time12">
       <div class="hour col-1">
         12pm
       </div>
@@ -61,7 +65,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time13">
       <div class="hour col-1">
         1pm
       </div>
@@ -69,7 +73,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time14">
       <div class="hour col-1">
         2pm
       </div>
@@ -77,7 +81,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time15">
       <div class="hour col-1">
         3pm
       </div>
@@ -85,7 +89,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time16">
       <div class="hour col-1">
         4pm
       </div>
@@ -93,7 +97,7 @@
       <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
-    <div class="row time-block">
+    <div class="row time-block" id="time17">
       <div class="hour col-1">
         5pm
       </div>
