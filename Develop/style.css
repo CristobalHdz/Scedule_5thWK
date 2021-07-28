@@ -70,8 +70,16 @@ img {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  
   color: white;
+}
+
+.saveBtnEnabled {
+  background-color: #06aed5;
+}
+
+.saveBtnDisabled {
+  background-color:#d3d3d3 ;
 }
 
 .saveBtn i:hover {

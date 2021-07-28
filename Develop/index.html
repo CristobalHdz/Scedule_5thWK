@@ -4,13 +4,14 @@
 <!-- Discoreverd that ids can start with numbers -->
 <!-- Did the date and schedule codes separately just for cleaner code -->
 <!-- Get hours: https://www.includehelp.com/code-snippets/get-current-time-in-hours24-minutes-seconds-format-in-javascript.aspx#:~:text=To%20get%20the%20current%20time%20in%20JavaScript%2C%20we,getSeconds%20%28%29%20Method%20%E2%80%93%20It%20returns%20current%20seconds -->
-<!-- Get all traversing elements: https://www.tutorialsteacher.com/jquery/jquery-traversing-dom-elements -->
-<!-- Can't declare before in JQUERY -->
+<!-- All traversing elements: https://www.tutorialsteacher.com/jquery/jquery-traversing-dom-elements -->
 <!-- How to loop thorugh elements: https://www.geeksforgeeks.org/how-to-loop-through-input-elements-in-jquery/ -->
 <!-- Another element looping: https://www.codesd.com/item/jquery-loops-over-the-list-items-and-gets-the-value-of-the-data-imgid-attribute.html  -->
 <!-- Have to change all of the ids to start with the same thing. It is easier for the loop to start with "time" and give a number -->
 <!-- Can work with id=time1, but it is easier just to show the real time beacuse of the conditions that checks the time vs current time -->
-
+<!-- Add class from jQuery: https://www.w3schools.com/jquery/html_addclass.asp -->
+<!-- Trigger everything on load: https://stackoverflow.com/questions/43262469/jquery-trigger-on-page-load -->
+<!-- Change img source: https://coursesweb.net/jquery/add-change-remove-attribute-jquery -->
 
 <head>
   <meta charset="UTF-8" />
@@ -33,12 +34,12 @@
 
   <div class="container">
 
-    <div class="row time-block" id="time9">
+    <div class="row time-block" id="time9"> 
       <div class="hour col-1">
         9am
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button9" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time10">
@@ -46,7 +47,7 @@
         10am
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button10" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time11">
@@ -54,7 +55,7 @@
         11am
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button11" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time12">
@@ -62,7 +63,7 @@
         12pm
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button12" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time13">
@@ -70,7 +71,7 @@
         1pm
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button13" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time14">
@@ -78,7 +79,7 @@
         2pm
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button14" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time15">
@@ -86,7 +87,7 @@
         3pm
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button15" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time16">
@@ -94,7 +95,7 @@
         4pm
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button id="button16" class="saveBtn saveBtnEnabled col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
     <div class="row time-block" id="time17">
@@ -102,7 +103,7 @@
         5pm
       </div>
       <textarea class="description col-10"></textarea>
-      <button class="saveBtn col-1"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
+      <button  class="saveBtn saveBtnEnabled col-1" id="button17"><img src="../Assets/SaveImg.png" alt="Save Logo" /></button>
     </div>
 
   
