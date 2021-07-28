@@ -14,11 +14,12 @@ $(document).ready(function () {
     var buttonList = "" // Prints the buttons like the timeList
     var inputText = "" //Value of the textarea when saved
     var saveTimeText = "" // Value of the time for the textarea
+    var lockDisable = 1 // 1=past buttons are locked
 
     function colorChange() {
         $('.time-block').each(function () {
             timeList = parseInt($(this).attr('id').split("time")[1]);
-            
+
             //parseInt transforms the items into an integer value. parse is for objects, parseInt is for integers
             //this = the .time-block class
             //attr = gets the attribute "id" from every first div
@@ -46,22 +47,24 @@ $(document).ready(function () {
             }
         })
     }
-    
 
     //Change the button's image when locked
     function buttonChange() {
-        $('.saveBtn').each(function (){
+        $('.saveBtn').each(function () {
             buttonList = parseInt($(this).attr('id').split("button")[1])
-            if (hh > buttonList) {
-                $(this).attr('disabled','true') //disables button
-                $(this).addClass('saveBtnDisabled')
-                $(this).removeClass('saveBtnEnabled')
-                $(this).children().attr('src',"../Assets/LockImg.png") //Lock image
-            } else {
-                $(this).removeAttr('disabled','true') //enables button
-                $(this).removeClass('saveBtnDisabled')
-                $(this).addClass('saveBtnEnabled')
-                $(this).attr('src',"../Assets/SaveImg.png") // Save image
+            if (lockDisable = 1) {
+                if (hh > buttonList) {
+                    $(this).attr('disabled', 'true') //disables button
+                    $(this).addClass('saveBtnDisabled')
+                    $(this).removeClass('saveBtnEnabled')
+                    $(this).children().attr('src', "../Assets/LockImg.png") //Lock image
+                    lockDisable = lockDisable - buttonList.value
+                } else {
+                    $(this).removeAttr('disabled', 'true') //enables button
+                    $(this).removeClass('saveBtnDisabled')
+                    $(this).addClass('saveBtnEnabled')
+                    $(this).attr('src', "../Assets/SaveImg.png") // Save image
+                }
             }
         })
     }
@@ -70,13 +73,13 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function () {
         saveTimeText = $(this).parent().attr("id") //Saves the parent ID
         inputText = $(this).siblings(".description").val() // Saves the value inside the textarea
-    
+
         localStorage.setItem(saveTimeText, inputText)
 
     })
 
     //get Item for local storage
-    for (i=9; i < 18; i++) {
+    for (i = 9; i < 18; i++) {
         $(`#time${[i]}`).children('.description').val(localStorage.getItem(`time${[i]}`))
         console.log(i)
     }
