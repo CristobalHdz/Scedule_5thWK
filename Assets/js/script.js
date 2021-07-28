@@ -1,12 +1,6 @@
-//Show current date
+//Show today's date
 var today = moment()
 $('#currentDay').text(today.format("dddd, MMM Do YYYY"))
-
-// Get current Time 
-var dt = new Date()
-var hh = dt.getHours()
-
-
 
 $(document).ready(function () {
     //Color change each hour
@@ -15,20 +9,13 @@ $(document).ready(function () {
     var inputText = "" //Value of the textarea when saved
     var saveTimeText = "" // Value of the time for the textarea
     var lockDisable = 1 // 1=past buttons are locked
+    // Get current Time 
+    var dt = new Date()
+    var hh = dt.getHours()
 
     function colorChange() {
         $('.time-block').each(function () {
             timeList = parseInt($(this).attr('id').split("time")[1]);
-
-            //parseInt transforms the items into an integer value. parse is for objects, parseInt is for integers
-            //this = the .time-block class
-            //attr = gets the attribute "id" from every first div
-            // split = Divides the string into 2 parts. Time and # and because of parseInt then we only get the number
-
-            // Change color if current is greater,same or lower than time-block
-            //We have to put every possible add or remove classes because it refreshes at every moment and changes from day to day
-            //if hour is greater than
-            //Changed the use of '.time-block' to 'this' when inside of the function
             if (hh > timeList) {
                 $(this).addClass('past');
                 $(this).removeClass('present');
@@ -73,15 +60,13 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function () {
         saveTimeText = $(this).parent().attr("id") //Saves the parent ID
         inputText = $(this).siblings(".description").val() // Saves the value inside the textarea
-
         localStorage.setItem(saveTimeText, inputText)
-
+        console.log(`The id: ${saveTimeText} has saved ${inputText} into the local storage.`)
     })
 
     //get Item for local storage
     for (i = 9; i < 18; i++) {
         $(`#time${[i]}`).children('.description').val(localStorage.getItem(`time${[i]}`))
-        console.log(i)
     }
 
     colorChange()
