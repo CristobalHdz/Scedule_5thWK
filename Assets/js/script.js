@@ -44,13 +44,13 @@ $(document).ready(function () {
                     $(this).attr('disabled', 'true') //disables button
                     $(this).addClass('saveBtnDisabled')
                     $(this).removeClass('saveBtnEnabled')
-                    $(this).children().attr('src', "../Assets/LockImg.png") //Lock image
+                    $(this).children().attr('src', "./Assets/LockImg.png") //Lock image
                     lockDisable = lockDisable - buttonList.value
                 } else {
                     $(this).removeAttr('disabled', 'true') //enables button
                     $(this).removeClass('saveBtnDisabled')
                     $(this).addClass('saveBtnEnabled')
-                    $(this).attr('src', "../Assets/SaveImg.png") // Save image
+                    $(this).attr('src', "./Assets/SaveImg.png") // Save image
                 }
             }
         })
