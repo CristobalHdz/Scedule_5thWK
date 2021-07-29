@@ -6,7 +6,7 @@
 
 by Cristobal Hernandez
 
-Published link: 
+Published link: https://cristobalhdz.github.io/Schedule_5thWK/
 
 
 # Section 02: General Information
